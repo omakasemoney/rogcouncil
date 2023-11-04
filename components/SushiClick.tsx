@@ -13,14 +13,14 @@ const SushiClick = () => {
     const jsConfetti = new JSConfetti();
 
     const handleOnClick = (event:MouseEvent) => {
-      const x = event.clientX - 29;
-      const y = event.clientY - 42;
+      const x = event.clientX - 36;
+      const y = event.clientY - 29;
       setCoordinates({ x, y });
       setLocations((prevLocations) => [...prevLocations, { x, y, id: prevLocations.length + 1 }]);
       setClickCount((prevCount) => prevCount + 1);
 
       jsConfetti.addConfetti({
-        emojis: ['🍣','🦄'],
+        emojis: ['🎣'],
         emojiSize: 100,
         confettiNumber: 30,
       });
@@ -53,15 +53,15 @@ const SushiClick = () => {
       {locations.map((location) => (
         <div key={location.id} style={{ position: 'absolute', top: location.y, left: location.x }}>
           <Image
-            src="/kwaji.png" 
-            alt="kwaji"
+            src="/rod.png" 
+            alt="fishing rod"
             width={69} 
             height={69} 
           />
         </div>
       ))}
       <div style={counterStyle}>
-        click count: {clickCount}
+        fishing rods: {clickCount}
       </div>
       <button style={{ position: 'fixed', bottom: '20px', right: '20px' }} onClick={clearLocations}>
         Clear
