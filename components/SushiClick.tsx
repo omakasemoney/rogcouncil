@@ -13,8 +13,8 @@ const SushiClick = () => {
     const jsConfetti = new JSConfetti();
 
     const handleOnClick = (event:MouseEvent) => {
-      const x = event.clientX - 36;
-      const y = event.clientY - 29;
+      const x = event.clientX - 12;
+      const y = event.clientY - 9;
       setCoordinates({ x, y });
       setLocations((prevLocations) => [...prevLocations, { x, y, id: prevLocations.length + 1 }]);
       setClickCount((prevCount) => prevCount + 1);
@@ -55,8 +55,8 @@ const SushiClick = () => {
           <Image
             src="/rod.png" 
             alt="fishing rod"
-            width={69} 
-            height={69} 
+            width={24} 
+            height={24} 
           />
         </div>
       ))}
